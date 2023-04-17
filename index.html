@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Interactive form</title>
+
+</head>
+<body>
+  
+  <main class="container">
+    <div class="cards">
+            <div class="card-front-img">
+              <img src="images/bg-card-front.png" alt="">
+
+              <div class="details">
+                <div class="circle-img">
+                  <img src="images/card-logo.svg" alt="card-logo-icon">
+                </div>
+                
+                <p class="card-num-disp">0000 0000 0000 0000</p>
+                <div class="initials">
+                  <p class="cardholder-name-disp">JANE APPLESEED</p> 
+                  <p class="card-exp-disp"><span class="month-disp">00</span>/
+                    <span class="year-disp">00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <div class="card-back-img">
+            <img src="images/bg-card-back.png" alt="card back">
+            <div class="details">
+              <p class="card-cvc-disp"> 000 </p>
+            </div> 
+          </div>
+    </div>
+
+    <div class="bg-img">
+        <picture>
+          <source media="(min-width:550px)" srcset="images/bg-main-desktop.png">
+          <img src="images/bg-main-mobile.png" alt="background Image">
+        </picture>
+    </div>
+
+    <div class="form-section">
+        <form>
+            <div class="form-field">
+              <label for="name">cardholder Name</label>
+              <input type="text" name="name"  class="name" id="name" placeholder="e.g. Jane Appleseed">
+              <small class="name-feedback"></small>
+            </div>
+            <div class="form-field">
+              <label for="card-number">card Number</label>
+              <input type="text" name="number" class="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+              <small class="number-feedback"></small>
+            </div>
+            <div class="form-field ">
+              <div class="bottom">
+                <div class="exp-date">
+                  <label for="exp.date">exp. date[mm/yy]</label>
+                  <div class="date">
+                    <input type="number" name="month" id="month" placeholder="MM">
+                    <input type="number" name="year" id="year" placeholder="YY">
+                  </div>
+                  <small class="date-feedback"></small>
+                  </div>
+                  <div class="cvc">
+                    <label for="card-cvc-disp">cvc</label>
+                    <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+                    <small class="cvc-feedback"></small>
+                  </div>
+            </div>
+            </div>
+            <button name="submit" id="submit" type="submit">Confirm</button>
+        </form>
+    </div>
+      <div class="complete">
+          <img src="images/icon-complete.svg" alt="">
+          <h1 class="complete-title">Thank you!</h1>
+          <p class="complete-msg">We've added your card details</p>
+          <button class="complete-btn">Continue</button>  
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Felixicity</a>.
+      </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

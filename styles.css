@@ -1,0 +1,275 @@
+:root{
+    --card-size-desktop:22rem;
+    --card-size-mobile:17rem;
+    --blue:hsl(249, 99%, 64%);
+    --violet:hsl(278, 94%, 30%);
+    --Red:hsl(0, 100%, 66%);
+    --White:hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    }
+
+*  {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:"Outfit",Arial, sans-serif;
+}
+
+ picture img{
+    width:100%;
+ }
+ 
+ button {
+    display: block;
+    width:100%;
+    border-radius: 8px;
+    border:none;
+    background-color:var(--violet);
+    color:var(--White);
+    font-weight:bold;
+    padding:.7rem;
+    margin:2rem 0;
+    cursor:pointer
+}
+
+button:hover{
+    background-color:var(--Very-dark-violet);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cards {
+    position: absolute;
+    padding:1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top:3rem ;
+    width: 100%;
+}
+
+
+
+.card-front-img,
+.card-back-img{
+    position: relative;
+}
+
+.card-front-img {
+    transform: translateY(-45%);
+    align-self: self-start;
+    z-index: 5;
+    
+}
+.card-back-img {
+    align-self: self-end;
+}
+
+
+.card-front-img img,
+.card-back-img img{
+    width:var(--card-size-mobile);
+}
+
+
+.cards .details {
+    position: absolute;
+    padding: .9rem;
+    top: 0;
+    width: 100%;
+    color:var(--White);
+    letter-spacing: 1.7px;
+}
+
+.circle-img{
+    width:3rem;
+}
+
+.circle-img img {
+    width: 100%;
+}
+
+.card-back-img .details p {
+    transform: translateY(300%);
+    margin-left: 12.5rem;
+    font-size: .5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-front-img .card-num-disp {
+    margin:2.2rem 0 1rem 0;
+    font-size: 1.13rem;
+}
+
+.card-front-img .initials {
+    display: flex;
+    justify-content: space-between;
+    font-size:.1em;
+}
+
+.form-section {
+    margin-top:6rem;
+    padding: 0px 1rem;
+    min-width:375px;
+    max-width: 500px;
+}
+
+.form-section .form-field label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 5px;
+    font-weight:bold;
+    letter-spacing: 1px;
+    padding:.4rem 0;
+}
+
+
+.form-field input.name,
+.form-field input.card-number{
+    display: block;
+    width:100%;
+    padding:.5rem 1rem;
+    margin-bottom: .5rem;
+}
+
+
+.form-field .bottom,
+.form-field .date{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+
+
+.form-field .date input{
+    width: 3.5rem;
+    padding:.5rem;
+    margin-right:.7rem;
+}
+
+.form-field .cvc input{
+    padding:.5rem;
+}
+
+input:focus{
+    outline:1px solid #011;
+}
+
+input:active{
+    outline:1px solid var(--blue);
+}
+
+.form-field input {
+    border: 1.2px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+}
+
+.err-msg {
+    color:var(--Red);
+    font-size: .3rem;
+    display: inline-block;
+}
+
+
+.complete {
+    display:none;
+    margin-top:6rem;
+    text-align: center;
+    padding: 0px 1rem;
+    min-width:375px;
+    max-width: 500px;
+}
+
+.complete-title{
+    color:var(--Very-dark-violet);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.complete-msg{
+    color:var(--Dark-grayish-violet);
+    font-size: 1.2rem;
+}
+
+.attribution { font-size: 11px; text-align: center ; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width:900px){
+    .container {
+        flex-direction: row;
+    }
+
+    .bg-img {
+        height: 100vh;
+        width:25vw;
+    } 
+
+    .bg-img picture img {
+        height: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        margin-top: 3rem;
+        margin-left:7rem;
+        padding: 1rem;
+        width:500px;
+        row-gap: 1rem;
+    }
+     
+    .circle-img {
+        width:5rem;
+    }
+
+     .cards img {
+        width:100%;
+     }
+
+    .card-front-img{
+        transform: translateX(-13%);
+        
+    }
+    
+    .card-back-img{
+        transform: translateX(-20%);
+    }
+
+    .card-front-img,
+    .card-back-img{
+       width:var(--card-size-desktop);
+       padding: auto;
+    }
+
+    .card-back-img .details p {
+        margin-top:1.6rem;
+        margin-left: 16.5rem;
+        letter-spacing:1.8px;
+    }
+
+    .card-front-img .card-num-disp {
+        margin:3rem 0 1rem 0;
+        letter-spacing: 5px;
+    }
+
+    .form-section {
+        display:block;
+        margin:8rem 0rem auto 18rem;
+    }
+    .complete {
+        margin:8rem 0rem auto 18rem;
+    }
+}
