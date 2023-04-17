@@ -33,13 +33,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/Screenshot-desktop.png)
+![](./images/Screenshot_complete.png)
 
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here]( https://felixicity.github.io/interactive-card-details-form-main/)
 
 ## My process
 - I started with the html markup for the page
