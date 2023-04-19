@@ -71,19 +71,25 @@ formPage.addEventListener("keyup", e => {
             dateFeedback.textContent = msg
             dateFeedback.classList.add("err-msg")
         }
+        
+        if(value > 12){
+            const msg = "Invalid month"
+            dateFeedback.textContent = msg
+            dateFeedback.classList.add("err-msg")
+        }
+        
+        if(value.length > 2){
+            const msg = "Not a valid value for month"
+            dateFeedback.textContent = msg
+            dateFeedback.classList.add("err-msg")
+        }
+        
+        if(value.length > 2){
+            const msg = "Not a valid value for month"
+            dateFeedback.textContent = msg
+            dateFeedback.classList.add("err-msg")
+        }
 
-        
-        if(value.length > 2){
-            const msg = "Not a valid value for month"
-            dateFeedback.textContent = msg
-            dateFeedback.classList.add("err-msg")
-        }
-        
-        if(value.length > 2){
-            const msg = "Not a valid value for month"
-            dateFeedback.textContent = msg
-            dateFeedback.classList.add("err-msg")
-        }
 
         if(value.length == 1){
             monthDisplay.textContent = `0${value}`
@@ -125,9 +131,10 @@ formPage.addEventListener("keyup", e => {
     if(name == "cvc"){
         cvcDisplay.textContent = value
         if(!value){
-            cvcDisplay.textContent= 000
+            cvcDisplay.textContent ="000"
             console.log("please provide a value")
         }
+
         if(value.length > 3){
             const msg = "Characters cannot be more than three"
             cvcFeedback.textContent = msg
