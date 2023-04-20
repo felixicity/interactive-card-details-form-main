@@ -9,6 +9,11 @@ const nameFeedback  = document.querySelector(".name-feedback")
 const numberFeedback  = document.querySelector(".number-feedback")
 const dateFeedback  = document.querySelector(".date-feedback")
 const cvcFeedback  = document.querySelector(".cvc-feedback")
+const cardHolder = document.getElementById("name")
+const cardNumber = document.getElementById("card-number")
+const monthNumber = document.getElementById("month")
+const yearNumber = document.getElementById("year")
+const cvcNumber = document.getElementById("cvc")
 const completePage = document.querySelector(".complete")
 
 
@@ -149,11 +154,18 @@ formPage.addEventListener("keyup", e => {
 })
 
 
-submitBtn.addEventListener("click",e =>{
-        e.preventDefault()
-        console.log("submitting...")
+submitBtn.addEventListener("click",(e) => {
+    e.preventDefault()
+    console.log("submitting...")
+
+    if (!cardHolder.value || !cardNumber.value || !monthNumber.value || !yearNumber.value || !cvcNumber.value ){
+        console.log({"message":"All fields required ", "status":400 })
+    }else{
+
+        console.log(cardHolder.value)
         completePage.style.display = "block"
         formPage.style.display = "none"
+    }
 })
 
 

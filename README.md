@@ -94,10 +94,8 @@ input::-webkit-inner-spin-button {
 
 
 
-### This section to outline areas that I want to continue focusing on in future projects. These could be concepts I'm still not completely comfortable with or techniques I found useful that you want to refine and perfect.
+### This section to outline areas that I want to continue focusing on in future projects. These could be concepts I'm still not completely comfortable with or techniques I found useful that you want to refine and perfect
 
--Ensuring that all values in the form are validated before submission. My submit button could just be clicked before inputing
-values.
 -Trying to add border property and linear-gradient to the input fields. I managed using the outline property for the focus state but the linear-gradient for the active state wasn't working.
 
 
